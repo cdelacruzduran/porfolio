@@ -1,0 +1,473 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2B403F;
+    margin: 0;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+body p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/******* NAV BAR *********/
+
+.topnav {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;    
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+ul.topnav li {
+    text-align: center;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 5px 25px 5px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;}
+
+nav li a:hover {
+    color: #82bfbe;
+}
+
+/******** INTRO PARAGRAPH ************/
+div.IntroParagraph {
+    display: block;
+    height: auto;
+    width: 55%;
+    padding: 40px 50px 50px 50px;
+}
+
+p.IntroText {
+    color: white;
+    font-size: 40px;
+    margin: 0;
+}
+
+
+/***** ICONS ********/
+.container table {
+    width: 100%;
+    border-spacing: 0px;
+    text-align: center;
+    padding: 0;
+    padding-bottom: 0;
+    border-collapse: collapse;
+}
+
+.container table tbody {
+    padding-left: 0px;
+    padding-bottom: 0;
+}
+
+.container table tr {
+    padding: 0;
+    padding-bottom: 0;
+}
+
+.container table td {
+    display: inline-block;
+    float: none;
+    padding-right: 1em;
+    padding-bottom: 0;
+}
+
+.container table td a {
+    padding-bottom: 0;
+}
+
+.container table td img.icon {
+    width: 50px;
+    height: 50px;
+    padding-bottom: 0;
+}
+
+.container table td img.resume {
+    width: 150px;
+    height: 50px;
+    padding-bottom: 0;
+}
+
+
+/**** PAGES ****/
+/***Work***/
+div.myworkbox {
+    margin: 50px 50px 75px 50px;
+    background-color: #57807F;
+    color: white;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+}
+
+
+div.myworkbox p {
+    padding: 10px;
+    font-size: 1.2em;
+    color: white;
+    font-size: 1.2em;
+    display: inline-block;
+    margin: 0;
+}
+
+.myworkbox #infographic {
+    cursor: pointer;
+    transition: 0.3s;
+    width: 30%;
+    height: 500px;
+    padding: 10px;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#infographic:hover {
+    opacity: 0.7;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+  /* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/***EXPERIENCE***/
+div.experiencebox {
+    margin: 75px 50px 75px 50px;
+    background-color: #57807F;
+    color: white;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+}
+
+div.experiencebox .gridwrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "SaltPhoto    CasaplexPhoto"
+        "SaltPara     CasaplexPara";
+    column-gap: 25px;
+    text-align: center;
+    row-gap: 50px;
+}
+
+div.experiencebox .gridwrapper .salt img {
+    width: 50%;
+    height: auto;
+    padding-left: auto;
+    padding-right: auto;
+    padding-bottom: 0px;
+    grid-area: Saltphoto;
+}
+
+div.experiencebox .gridwrapper .Casa img {
+    width: 50%;
+    height: auto;
+    padding-left: auto;
+    padding-right: auto;
+    padding-bottom: 0px;
+    grid-area: Casaplexphoto;
+}
+
+div.experiencebox .gridwrapper .saltp p {
+    padding: 15px;
+    font-size: 1.2em;
+    display: inline;
+    line-height: 1.4em;
+    grid-area: SaltPara;
+}
+
+div.experiencebox .gridwrapper .Casap p {
+    padding: 15px;
+    font-size: 1.2em;
+    display: inline;
+    line-height: 1.4em;
+    grid-area: CasaplexPara;
+}
+
+/***ABOUT ME****/
+div.aboutmebox {
+    margin: 75px 50px 75px 50px;
+    background-color: #57807F;
+    color: white;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+}
+
+div.aboutmebox p {
+    padding: 0px 15px 0px 15px;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    display: block;
+}
+
+div.aboutmebox .rowimages {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create two equal columns that sit next to each other */
+
+.aboutmebox .column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+
+.aboutmebox .column img {
+    margin: 5px 0;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+/**** text align ****/
+div.myworkbox h2 {
+    padding-top: 5px;
+    text-align: center;
+}
+
+div.experiencebox h2 {
+    padding-top: 5px;
+    text-align: center;
+}
+
+div.aboutmebox h2 {
+    padding-top: 5px;
+    text-align: center;
+}
+
+div.ContactForm h2 {
+    color: white;
+    text-align: center;
+}
+
+/********* CONTACT FORM *******/
+div.ContactForm form {
+    margin: 50px;
+    line-height: 2em;
+    background-color: #182C2B;
+    text-align: center;
+    border-radius: 3px;
+    padding: 10px 0;
+    display: block;
+}
+
+.inner-width {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.ContactForm {
+    font-size: 20px;
+    font-family: "montserrat", sans-serif;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 50px;
+}
+
+.Name, .Email, .Message {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+    color: #888;
+    padding: 15px 10px;
+    font-size: 14px;
+}
+
+.Email {
+    float: right;
+    width: 300px;
+}
+
+.Name {
+    float: left;
+    width: 300px;
+}
+
+.Message {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.ContactForm .form-controlsubmit {
+    background: none;
+    color: #70a1ff;
+    border: 1px solid #70a1ff;
+    padding: 12px 40px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.ContactForm .form-controlsubmit:hover {
+    background: #70a1ff;
+    color: #fff;
+}
+
+/*********** MOBILE *********/
+@media screen and (max-width: 1300px) {
+    body {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .IntroParagraph p.IntroText {
+        font-size: 30px;
+    }
+}   
+
+@media screen and (max-width: 800px) {
+    body {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    nav li a {
+        font-size: 15px;
+    }
+
+    nav.MainMenu li a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 10px 15px 10px 15px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    div.IntroParagraph {
+        display: block;
+        height: auto;
+        width: 95%;
+        padding: 25px 25px 12.5px 25px;
+    }
+    div.IntroParagraph p.IntroText {
+        font-size: 25px;
+    }
+
+    .container table {
+        width: 95%;
+        height: 150 px;
+        display: inline-block;
+        border-spacing: 0px;
+        margin: 12.5px 25px 12.5px 25px;
+        overflow: hidden;
+    }
+   
+    div.myworkbox {
+        margin: 12.5px 25px 50px 25px;
+        height: auto;
+    }
+    
+    div.experiencebox {
+        margin: 50px 25px 50px 25px;
+        height: auto;
+    }
+    
+    div.aboutmebox {
+        margin: 50px 25px 50px 25px;
+        height: auto;
+    }
+
+    .aboutmebox .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    div.ContactForm h2 {
+        margin-left: 25px;
+    }
+
+    div.ContactForm form {
+        margin: 25px;
+        line-height: 2em;
+    }
+    .Name, .Email {
+        width: 100%;
+    }
+}
